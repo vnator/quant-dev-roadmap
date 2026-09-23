@@ -6,67 +6,120 @@ A roadmap with my studies and material for consolidate my career as a quantitati
 ## 1. Fundamentals
 
 ### Algorithms Fundamentals
-- [ ] **Algorithm Analysis (Análise de Algoritmos)**
-  - [ ] **Focus:** Big-O notation, recurrence relations, master theorem, and algorithmic complexity.
-  - [ ] **Book:** [*Introduction to Algorithms (CLRS)*](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/) by Thomas H. Cormen et al.
-  - [ ] **Course:** [MIT 6.046J - Design and Analysis of Algorithms](https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/) (MIT OpenCourseWare).
-- [ ] **Data Structures and Core Algorithms**
-  - [ ] **Focus:** Hash tables, balanced search trees, graph traversals, and sorting.
-  - [ ] **Book:** [*Algorithms*](https://algs4.cs.princeton.edu/home/) by Robert Sedgewick and Kevin Wayne.
-  - [ ] **Course:** [MIT 6.006 - Introduction to Algorithms](https://archive.org/details/MIT6.006S20) (MIT OpenCourseWare).
-- [ ] **Dynamic Programming (Programação Dinâmica)**
-  - [ ] **Focus:** Overlapping subproblems, optimal substructure, memoization, and tabulation (crucial for option pricing trees and optimal execution).
-  - [ ] **Book:** [*Dynamic Programming and Optimal Control*](http://www.athenasc.com/dpbook.html) by Dimitri P. Bertsekas.
-  - [ ] **Course:** [MIT 6.006 - Dynamic Programming Modules](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/video_galleries/lecture-videos/) (MIT OpenCourseWare).
+- [x] **Algorithm Analysis (Análise de Algoritmos)**: Big-O notation, recurrence relations, master theorem, and algorithmic complexity.
+  - [x] **Course:** [MIT 6.046J - Design and Analysis of Algorithms](https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/) (MIT OpenCourseWare).
+- [x] **Data Structures and Core Algorithms**: Hash tables, balanced search trees, graph traversals, and sorting.
+  - [x] **Book:** [*Algorithms*](https://algs4.cs.princeton.edu/home/) by Robert Sedgewick and Kevin Wayne.
+  - [x] **Course:** Computational Applied Math with Unicentro and Information System
+- [ ] **Algorightms II, HashMaps, Matrix, Graphs and Trees:
+  - [x] **Course:** Computational Applied Math with unicentro
+  - [ ] **Book:** [*Introduction to Algorithms (CLRS)*](https://a.co/d/0eSMTCZs) by Thomas H. Cormen et al. 
+    - [ ] Part I: Foundations
+      - [ ] Chapter 1: The Role of Algorithms in Computing
+      - [ ] Chapter 2: Getting Started
+      - [ ] Chapter 3: Characterizing Running Times
+      - [ ] Chapter 4: Divide-and-Conquer
+      - [ ] Chapter 5: Probabilistic Analysis and Randomized Algorithms
+    - [ ] Part II: Sorting and Order Statistics
+      - [ ] Chapter 6: Heapsort
+      - [ ] Chapter 7: Quicksort
+      - [ ] Chapter 8: Sorting in Linear Time
+      - [ ] Chapter 9: Medians and Order Statistics
+    - [ ] Part III: Data Structures
+      - [ ] Chapter 10: Elementary Data Structures
+      - [ ] Chapter 11: Hash Tables
+      - [ ] Chapter 12: Binary Search Trees
+      - [ ] Chapter 13: Red-Black Trees
+    - [ ] Part IV: Advanced Design and Analysis Techniques
+      - [ ] Chapter 14: Dynamic Programming
+      - [ ] Chapter 15: Greedy Algorithms
+      - [ ] Chapter 16: Amortized Analysis
+    - [ ] Part V: Advanced Data Structures
+      - [ ] Chapter 17: Augmenting Data Structures
+      - [ ] Chapter 18: B-Trees
+      - [ ] Chapter 19: Data Structures for Disjoint Sets
+    - [ ]Part VI: Graph Algorithms
+      - [ ] Chapter 20: Elementary Graph Algorithms
+      - [ ] Chapter 21: Minimum Spanning Trees
+      - [ ] Chapter 22: Single-Source Shortest Paths
+      - [ ] Chapter 23: All-Pairs Shortest Paths
+      - [ ] Chapter 24: Maximum Flow
+      - [ ] Chapter 25: Matchings in Bipartite Graphs
+    - [ ] Part VII: Selected Topics
+      - [ ] Chapter 26: Parallel Algorithms
+      - [ ] Chapter 27: Online Algorithms
+      - [ ] Chapter 28: Matrix Operations
+      - [ ] Chapter 29: Linear Programming
+      - [ ] Chapter 30: Polynomials and the FFT
+      - [ ] Chapter 31: Number-Theoretic Algorithms
+      - [ ] Chapter 32: String Matching
+      - [ ] Chapter 33: Machine-Learning Algorithms
+      - [ ] Chapter 34: NP-Completeness
+      - [ ] Chapter 35: Approximation Algorithms
+    - [ ] Part VIII: Appendix: Mathematical Background
+      - [ ] Appendix A: Summations
+      - [ ] Appendix B: Sets, Etc.
+      - [ ] Appendix C: Counting and Probability
+      - [ ] Appendix D: Matrices
+- [x] **Dynamic Programming (Programação Dinâmica)**: Overlapping subproblems, optimal substructure, memoization, and tabulation (crucial for option pricing trees and optimal execution).
+  - [x] **Book:** [*Dynamic Programming and Optimal Control*](http://www.athenasc.com/dpbook.html) by Dimitri P. Bertsekas.
+  - [x] **Course:** [MIT 6.006 - Dynamic Programming Modules](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/video_galleries/lecture-videos/) (MIT OpenCourseWare).
 
 ### Computer Science Fundamentals
-- [ ] **Computer Architecture & Memory Hierarchy**
-  - [ ] **Focus:** Cache locality, memory barriers, branch prediction, and CPU pipelines.
-  - [ ] **Book:** [*Computer Systems: A Programmer's Perspective*](https://csapp.cs.cmu.edu/) by Randal E. Bryant and David R. O'Hallaron.
-  - [ ] **Course:** [MIT 6.004 - Computation Structures](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2009/).
-- [ ] **Operating Systems & Systems Programming**
-  - [ ] **Focus:** Process scheduling, multithreading, concurrency, kernel bypass, and POSIX internals.
-  - [ ] **Book:** [*Operating Systems: Three Easy Pieces*](https://pages.cs.wisc.edu/~remzi/OSTEP/) by Remzi H. Arpaci-Dusseau.
-  - [ ] **Course:** [UC Berkeley CS162 - Operating Systems](https://cs162.org/).
+- [x] **Computer Architecture & Memory Hierarchy**: Cache locality, memory barriers, branch prediction, and CPU pipelines.
+  - [x] **Book:** [*Computer Systems: A Programmer's Perspective*](https://csapp.cs.cmu.edu/) by Randal E. Bryant and David R. O'Hallaron.
+  - [x] **Course:** [MIT 6.004 - Computation Structures](https://ocw.mit.edu/courses/6-004-computation-structures-spring-2009/).
+- [x] **Operating Systems & Systems Programming**: Process scheduling, multithreading, concurrency, kernel bypass, and POSIX internals.
+  - [x] **Book:** [*Operating Systems: Three Easy Pieces*](https://pages.cs.wisc.edu/~remzi/OSTEP/) by Remzi H. Arpaci-Dusseau.
+  - [x] **Course:** Information System by UCP
+  - [x] **Bonus:** [UC Berkeley CS162 - Operating Systems](https://cs162.org/).
 
 ### Mathematics Fundamentals
-- [ ] **Elementary Mathematics (Matemática Elementar)**
-  - [ ] **Focus:** Foundational building blocks divided into core subjects.
-  - [ ] *Sets, Functions, and Arithmetic (Conjuntos e Funções)* 
-  - [ ] *Geometry and Trigonometry (Geometria e Trigonometria)*
-  - [ ] *Combinatorics and Probability (Combinatória e Probabilidade)*
-  - [ ] **Book:** [*A Matemática do Ensino Médio (Vol 1, 2, 3)*](https://loja.sbm.org.br/index.php/colecoes/colecao-do-professor-de-matematica/a-matematica-do-ensino-medio-vol-1.html) by Elon Lages Lima, Paulo Cezar Pinto Carvalho, Eduardo Wagner, Augusto César Morgado (Coleção do Professor de Matemática - SBM/IMPA).
-  - [ ] **Course:** [IMPA - Programa de Aperfeiçoamento de Professores de Matemática do Ensino Médio (PAPMEM)](https://www.youtube.com/playlist?list=PLo4jXE-LdDTQ_r7pU19A075h0qJ_qA25-) (IMPA YouTube).
-- [ ] **Analytic Geometry (Geometria Analítica)**
-  - [ ] **Focus:** Vectors, lines, planes, conics, and quadrics in $R^2$ and $R^3$.
-  - [ ] **Book:** [*Geometria Analítica: Um Tratamento Vetorial*](https://www.amazon.com.br/Geometria-Anal%C3%ADtica-Tratamento-Paulo-Boulos/dp/8581438054) by Paulo Boulos and Ivan de Camargo.
-  - [ ] **Course:** [USP - Geometria Analítica (UNIVESP)](https://www.youtube.com/playlist?list=PLxI8Can9yAHd2Uka-YQh7w9XzMhZ4gM0A).
-- [ ] **Calculus 1 (Single Variable Calculus)**
-  - [ ] **Focus:** Limits, derivatives, integrals, and the fundamental theorem of calculus.
-  - [ ] **Book:** [*Calculus*](https://www.amazon.com/Calculus-4th-Michael-Spivak/dp/0914098918) by Michael Spivak.
-  - [ ] **Course:** [MIT 18.01 - Single Variable Calculus](https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/).
-- [ ] **Calculus 2 (Multivariable Calculus)**
-  - [ ] **Focus:** Partial derivatives, double/triple integrals, and optimization in multiple dimensions.
-  - [ ] **Book:** [*Calculus, Vol. 2*](https://www.wiley.com/en-us/Calculus%2C+Volume+2%3A+Multi+Variable+Calculus+and+Linear+Algebra+with+Applications+to+Differential+Equations+and+Probability%2C+2nd+Edition-p-9780471000075) by Tom M. Apostol.
-  - **Course:** [MIT 18.02 - Multivariable Calculus](https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/).
-- [ ] **Calculus 3 (Vector Calculus & Differential Equations)**
-  - **Focus:** Line integrals, surface integrals, Green's, Stokes', and Divergence theorems, plus ODEs.
-  - **Book:** [*Equações Diferenciais Aplicadas*](https://loja.sbm.org.br/index.php/equacoes-diferenciais-aplicadas.html) by Djairo Guedes de Figueiredo (SBM/IMPA).
-  - **Course:** [MIT 18.03 - Differential Equations](https://ocw.mit.edu/courses/18-03-differential-equations-spring-2010/).
-- [ ] **Linear Algebra**
-  - [ ] **Focus:** Matrix operations, eigenvalues, eigenvectors, and vector spaces.
-  - [ ] **Book:** [*Álgebra Linear*](https://loja.sbm.org.br/index.php/algebra-linear.html) by Elon Lages Lima (Coleção Matemática Universitária - SBM/IMPA).
-  - [ ] **Course:** [MIT 18.06 - Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/).
+- [x] **Elementary Mathematics (Matemática Elementar)**: Foundational building blocks divided into core subjects.
+    - [x] *Sets, Functions, and Arithmetic (Conjuntos e Funções)* 
+    - [x] *Geometry and Trigonometry (Geometria e Trigonometria)*
+    - [X] *Combinatorics and Probability (Combinatória e Probabilidade)*
+  - [ ] **Books:**
+    - [ ] [Math Fundamentals 1 by Elon Lages Lima](https://www.livrosdematematica.com/loja/elon-lages-lima/a-matematica-do-ensino-medio-volume-1/)
+    - [ ] [Math Fundamentals 2 by Elon Lages Lima](https://www.livrosdematematica.com/loja/elon-lages-lima/a-matematica-do-ensino-medio-volume-2/)
+    - [ ] [Math Fundamentals 3 by Elon Lages Lima](https://www.livrosdematematica.com/loja/elon-lages-lima/a-matematica-do-ensino-medio-volume-3/)
+  - [x] **Course:** Computational Applied Math by Unicentro
+  - [ ] **Bonus:** [IMPA - Programa de Aperfeiçoamento de Professores de Matemática do Ensino Médio (PAPMEM)](https://www.youtube.com/playlist?list=PLo4jXE-LdDTQ_r7pU19A075h0qJ_qA25-) (IMPA YouTube).
+- [x] **Analytic Geometry (Geometria Analítica)**: Vectors, lines, planes, conics, and quadrics in $R^2$ and $R^3$.
+  - [x] **Book:** [*Geometria Analítica: Um Tratamento Vetorial*](https://www.amazon.com.br/Geometria-Anal%C3%ADtica-Tratamento-Paulo-Boulos/dp/8581438054) by Paulo Boulos and Ivan de Camargo.
+  - [x] **Course:** Computational Applied Math by Unicentro
+  - [x] **Bonus:** [USP - Geometria Analítica (UNIVESP)](https://www.youtube.com/playlist?list=PLxI8Can9yAHd2Uka-YQh7w9XzMhZ4gM0A).
+- [x] **Calculus 1 (Single Variable Calculus)**: Limits, derivatives, integrals of single-variable functions, and the Fundamental Theorem of Calculus.
+  - [x]  **Book:** [*Um Curso de Cálculo - Volume 1*](https://www.grupogen.com.br/um-curso-de-calculo-vol-1) by Hamilton Luiz Guidorizzi.
+  - [x] **Course:** Computational Applied Math by Unicentro
+  - [ ] **bonus:** [MIT 18.01 - Single Variable Calculus](https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/).
+- [x] **Calculus 2 (Multivariable Calculus and Multiple Integrals)**: Curves, multivariable functions, partial derivatives, gradients, optimization (maxima and minima), and double/triple integrals.
+  - [x] **Book:** [*Um Curso de Cálculo - Volume 2*](https://www.grupogen.com.br/um-curso-de-calculo-vol-2) (Partial derivatives and curves) and [*Um Curso de Cálculo - Volume 3*](https://www.grupogen.com.br/um-curso-de-calculo-vol-3) (Multiple integrals and optimization) by Hamilton Luiz Guidorizzi.
+  - [x] **Course:** Computational Applied Maty by Unicentro
+  - [x] **Bonus:** [MIT 18.02 - Multivariable Calculus](https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/).
+- [ ] **Calculus 3 (Vector Calculus and Series)**: Numerical and function sequences, infinite series, vector fields, line integrals, surface integrals, Green's, Stokes', and Gauss's (Divergence) Theorems.
+  - [ ] **Book:** [*Um Curso de Cálculo - Volume 4*](https://www.grupogen.com.br/um-curso-de-calculo-vol-4) by Hamilton Luiz Guidorizzi (Focus on the Series and Vector Calculus chapters).
+  - [ ] **Course:** Computational Applied Math by Unicentro
+  - [ ] **Bonus:** [MIT 18.02 - Multivariable Calculus](https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/) (Vector Calculus part).
+- [ ] **Ordinary Differential Equations (Equações Diferenciais Ordinárias - EDO)**: First-order ODEs, second-order linear equations, series solutions, Laplace transforms, and systems of first-order linear equations.
+  - [ ] **Book:** [*Equações Diferenciais Aplicadas*](https://loja.sbm.org.br/index.php/equacoes-diferenciais-aplicadas.html) by Djairo Guedes de Figueiredo (SBM) or [*Elementary Differential Equations and Boundary Value Problems*](https://www.wiley.com/en-us/Elementary+Differential+Equations+and+Boundary+Value+Problems) by Boyce & DiPrima.
+  - [ ] **Course:** Computational Applied Math by Unicentro
+  - [ ] **Bonus:** [MIT 18.03 - Differential Equations](https://ocw.mit.edu/courses/18-03-differential-equations-spring-2010/).
+- [x] **Linear Algebra**
+  - [x] **Focus:** Matrix operations, eigenvalues, eigenvectors, and vector spaces.
+  - [x] **Book:** [*Álgebra Linear*](https://loja.sbm.org.br/index.php/algebra-linear.html) by Elon Lages Lima (Coleção Matemática Universitária - SBM/IMPA).
+  - [x] **Computational Applied Math:** [MIT 18.06 - Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/).
+  - [x] **Bonus:** [MIT 18.06 - Linear Algebra](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/).
 
 ---
 
 ## 2. Advanced
 
 ### Advanced Algorithms
-- [ ] **Numerical Algorithms & Numerical Calculus (Cálculos Numéricos)**
-  - [ ] **Focus:** Root finding, interpolation, solving systems of linear equations numerically, and finite difference methods for PDEs (crucial for pricing derivatives).
+- [ ] **Numerical Algorithms & Numerical Calculus (Cálculos Numéricos)**: Root finding, interpolation, solving systems of linear equations numerically, and finite difference methods for PDEs (crucial for pricing derivatives).
   - [ ] **Book:** [*Cálculo Numérico: Aspectos Teóricos e Computacionais*](https://www.amazon.com.br/C%C3%A1lculo-Num%C3%A9rico-Aspectos-Te%C3%B3ricos-Computacionais/dp/8534602042) by Márcia A. Gomes Ruggiero and Vera Lúcia da Rocha Lopes.
-  - [ ] **Course:** [MIT 18.330 - Introduction to Numerical Analysis](https://ocw.mit.edu/courses/18-330-introduction-to-numerical-analysis-spring-2012/).
+  - [ ] **Course:** Computational Applied Math by Unicentro
+  - [ ] **Bonus:** [MIT 18.330 - Introduction to Numerical Analysis](https://ocw.mit.edu/courses/18-330-introduction-to-numerical-analysis-spring-2012/).
 - [ ] **Nature-Inspired Algorithms (Algoritmos Naturais)**
   - [ ] **Focus:** Genetic algorithms, ant colony optimization, and particle swarm optimization. Useful for hyperparameter tuning and alternative optimization schemas in quantitative trading.
   - [ ] **Book:** [*Introduction to Evolutionary Computing*](https://link.springer.com/book/10.1007/978-3-662-44874-8) by A.E. Eiben and J.E. Smith.
@@ -110,3 +163,33 @@ A roadmap with my studies and material for consolidate my career as a quantitati
   - [ ] **Focus:** Simple/multiple linear regression, residual analysis, ANOVA, and predictive modeling for asset returns.
   - [ ] **Book:** [*Applied Linear Statistical Models*](https://www.mheducation.com/highered/product/applied-linear-statistical-models-kutner-nachtsheim/M9780073108742.html) by Michael H. Kutner et al.
   - [ ] **Course:** [MIT 18.650 - Statistics for Applications](https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/).
+
+### Web Development for Quantitative Finance
+
+- [x] **Real-Time Data Streaming & API Infrastructure**
+  - **Focus:** WebSockets, SSE, gRPC, and REST/GraphQL for low-latency communication between pricing engines and web gateways.
+  - **Book:** [*High Performance Browser Networking*](https://hpbn.co/) by Ilya Grigorik (Fundamental para entender latência, TCP/UDP e otimização de redes web).
+  - **Course:** [University of Helsinki - Full Stack Open](https://fullstackopen.com/en/) (Curso acadêmico referência em desenvolvimento moderno de APIs, GraphQL e comunicação assíncrona).
+  - [x] WebSockets & Server-Sent Events (SSE)
+  - [x] gRPC & Protocol Buffers
+  - [x] RESTful APIs & GraphQL
+
+- [x] **High-Performance Frontend & Data Visualization**
+  - [x] **Book:** [*Visualization Analysis and Design*](https://www.cs.ubc.ca/~tmm/vadbook/) by Tamara Munzner (Referência acadêmica profunda sobre como estruturar visualização de dados complexos).
+  - [x] **Course:** [MIT 6.859 - Interactive Data Visualization](https://vis.mit.edu/classes/6.859/) (MIT OpenCourseWare).
+  - [x] Reactive Web Frameworks (e.g., React & Micro-frontends)
+  - [x] Advanced Charting & WebGL (TradingView, D3.js)
+  - [x] WebAssembly (Wasm) for near-native in-browser models
+
+- [x] **Cloud Architecture & Distributed Systems**
+  - [x] **Book:** [*Designing Data-Intensive Applications*](https://dataintensive.net/) by Martin Kleppmann (O padrão ouro da indústria e academia para arquitetura de dados distribuídos).
+  - [x] **Course:** [MIT 6.824 - Distributed Systems](https://pdos.csail.mit.edu/6.824/) (MIT PDOS Webcast).
+    - [x] Event-Driven Architecture (Kafka, RabbitMQ, Kinesis)
+    - [x] Cloud-Native Deployments (Docker, Kubernetes, AWS)
+    - [x] Observability & Telemetry (Elasticsearch, Prometheus, Grafana)
+
+- [x] **Financial Data Storage for Web Applications**
+  - [x] **Book:** [*Database Internals: A Deep Dive into How Distributed Data Systems Work*](https://www.databass.dev/) by Alex Petrov.
+  - [x] **Course:** [CMU 15-445/645 - Database Systems](https://15445.courses.cs.cmu.edu/) (Universidade Carnegie Mellon - Prof. Andy Pavlo, o melhor curso acadêmico sobre engenharia de bancos de dados).
+    - [x] Time-Series Databases (TimescaleDB, InfluxDB, ClickHouse)
+    - [x] In-Memory Caching (Redis, Memcached)
