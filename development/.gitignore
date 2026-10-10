@@ -1,0 +1,7 @@
+config/nodejs/node_modules/
+config/nodejs/coverage/
+config/rust/target/
+config/c/coverage*.html
+.build/
+*.gcda
+*.gcno
