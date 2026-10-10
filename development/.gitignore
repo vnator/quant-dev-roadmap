@@ -1,7 +1,15 @@
-config/nodejs/node_modules/
-config/nodejs/coverage/
-config/rust/target/
-config/c/coverage*.html
-.build/
+# Node.js
+/development/config/nodejs/node_modules/
+/development/config/nodejs/coverage/
+
+# Rust
+/development/config/rust/target/
+
+# C
+/development/.build/
 *.gcda
 *.gcno
+
+# Temporary files
+*.log
+.DS_Store
