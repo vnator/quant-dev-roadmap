@@ -1,6 +1,7 @@
 # Node.js
 /development/config/nodejs/node_modules/
 /development/config/nodejs/coverage/
+/development/node_modules/
 
 # Rust
 /development/config/rust/target/
@@ -23,4 +24,6 @@
 *.log
 .DS_Store
 
+# Default
+node_modules/
 
