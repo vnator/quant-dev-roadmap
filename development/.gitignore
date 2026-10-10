@@ -5,6 +5,15 @@
 # Rust
 /development/config/rust/target/
 
+## Rust build artifacts
+/development/.build/rust/
+
+## Rust coverage
+/development/coverage/rust/
+
+## Cargo artifacts (fallback)
+/development/config/rust/target/
+
 # C
 /development/.build/
 *.gcda
@@ -13,3 +22,5 @@
 # Temporary files
 *.log
 .DS_Store
+
+
