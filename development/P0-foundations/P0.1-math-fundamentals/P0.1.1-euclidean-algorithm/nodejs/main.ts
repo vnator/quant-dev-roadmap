@@ -1,15 +1,18 @@
 // a = q(b) + r;
 export default function gcd(a: number, b: number) {
-  let q = Math.floor(a / b);
-  let r = a - q * b;
+  a = Math.abs(a);
+  b = Math.abs(b);
 
-  while (r > 0) {
-    a = b;
-    b = r;
-
-    q = Math.floor(a / b);
-    r = a - q * b;
+  if (a === b) {
+    return b;
   }
 
-  return b;
+  while (b !== 0) {
+    const r = a % b;
+
+    a = b;
+    b = r;
+  }
+
+  return a;
 }
