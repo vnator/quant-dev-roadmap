@@ -1,14 +1,15 @@
 export default function binaryExp(base: number, exp: number): number {
   let result = 1;
+  let isPositive = exp > 0;
 
   while (exp > 0) {
-    if (exp % 1 === 1) {
+    if (exp % 2 === 1) {
       result *= base;
     }
 
     base *= base;
-    exp /= 2;
+    exp = Math.floor(exp / 2);
   }
 
-  return exp > 0 ? result : 1 / result;
+  return isPositive ? result : 1 / result;
 }
