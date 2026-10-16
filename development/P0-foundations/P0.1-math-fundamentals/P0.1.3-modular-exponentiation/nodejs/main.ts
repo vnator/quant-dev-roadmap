@@ -3,19 +3,36 @@ export default function modExp(
   exp: number,
   modulus: number,
 ): number {
-  if (modulus == 1) return 0;
-  let result = 1;
 
-  base %= modulus;
-
-  while (exp > 0) {
-    if ((exp & 1) === 1) {
-      result = (result * base) % modulus;
-    }
-
-    exp >>= 1;
-    base = (base * base) % modulus;
+  if (![base, exp, modulus].every(Number.isSafeInteger)) {
+    throw new RangeError("Arguments must be safe integers");
   }
 
-  return result;
+  if (exp < 0) {
+    throw new RangeError("Exponent must be non-negative");
+  }
+
+  if (modulus <= 0) {
+    throw new RangeError("Modulus must be positive");
+  }
+
+  const m = BigInt(modulus);
+
+  let factor = ((BigInt(base) % m) + m) % m;
+  let exponent = BigInt(exp);
+  let result = 1n % m;
+
+  while (exponent > 0n) {
+    if ((exponent & 1n) !== 0n) {
+      result = (result * factor) % m;
+    }
+
+    exponent >>= 1n;
+
+    if (exponent > 0n) {
+      factor = (factor * factor) % m;
+    }
+  }
+
+  return Number(result);
 }

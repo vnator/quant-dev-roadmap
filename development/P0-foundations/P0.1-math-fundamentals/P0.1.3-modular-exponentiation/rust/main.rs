@@ -1,15 +1,26 @@
-pub fn mod_exp(mut base: i64, mut exp: i64, modulus: i64) -> i64 {
-    let mut result: i64 = 1;
-    base %= modulus;
+use std::num::NonZeroU64;
 
-    while exp > 0 {
-        if exp % 2 != 0 {
-            result = (result * base) % modulus;
+pub fn mod_exp(base: i64, exp: u64, modulus: NonZeroU64) -> u64 {
+    let m = u128::from(modulus.get());
+    let m_i = i128::from(modulus.get());
+
+    let mut factor = ((i128::from(base) % m_i + m_i) % m_i) as u128;
+
+    let mut pow = exp;
+
+    let mut result = 1u128 % m;
+
+    while pow > 0 {
+        if !pow.is_multiple_of(2) {
+            result = (result * factor) % m;
         }
 
-        exp /= 2;
-        base = (base * base) % modulus;
+        pow /= 2;
+
+        if pow > 0 {
+            factor = (factor * factor) % m;
+        }
     }
 
-    result
+    result as u64
 }
