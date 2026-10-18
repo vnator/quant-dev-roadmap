@@ -1,4 +1,4 @@
-pub fn gcd(mut a: i32, mut b: i32) -> u32 {
+pub fn gcd(a: i32, b: i32) -> u32 {
     let mut a = a.unsigned_abs();
     let mut b = b.unsigned_abs();
 

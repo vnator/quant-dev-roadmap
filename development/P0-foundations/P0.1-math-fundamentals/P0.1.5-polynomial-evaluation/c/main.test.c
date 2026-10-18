@@ -1,11 +1,6 @@
+#include "main.h"
 #include <assert.h>
-#include <stdbool.h>
-#include <stddef.h>
-#include <stdint.h>
 #include <stdio.h>
-
-bool eval_polynomial(const int64_t *coefficients, size_t length, int64_t x,
-                     int64_t *out);
 
 typedef struct {
   const int64_t *coefficients;
@@ -14,21 +9,18 @@ typedef struct {
   int64_t expected;
 } TestCase;
 
-#define POLY(...)                                                              \
-  (const int64_t[]) { __VA_ARGS__ }
-
 #define CASE(x_value, expected_value, ...)                                     \
-  {POLY(__VA_ARGS__), sizeof((int64_t[]){__VA_ARGS__}) / sizeof(int64_t),      \
-   (x_value), (expected_value)}
+  {(const int64_t[]){__VA_ARGS__},                                             \
+   sizeof((const int64_t[]){__VA_ARGS__}) / sizeof(int64_t), (x_value),        \
+   (expected_value)}
 
 static void check_cases(const TestCase *cases, size_t count) {
   for (size_t i = 0; i < count; ++i) {
-    int64_t actual = 0;
+    CheckedI64 actual =
+        eval_polynomial(cases[i].coefficients, cases[i].length, cases[i].x);
 
-    assert(eval_polynomial(cases[i].coefficients, cases[i].length, cases[i].x,
-                           &actual));
-
-    assert(actual == cases[i].expected);
+    assert(actual.ok);
+    assert(actual.value == cases[i].expected);
   }
 }
 
@@ -71,26 +63,31 @@ static void should_detect_overflow(void) {
   };
 
   for (size_t i = 0; i < sizeof(cases) / sizeof(cases[0]); ++i) {
-    int64_t result = 777;
+    CheckedI64 actual =
+        eval_polynomial(cases[i].coefficients, cases[i].length, cases[i].x);
 
-    assert(!eval_polynomial(cases[i].coefficients, cases[i].length, cases[i].x,
-                            &result));
-
-    assert(result == 777);
+    assert(!actual.ok);
   }
 }
 
-static void should_reject_invalid_pointers(void) {
-  const int64_t coefficients[] = {1, 2, 3};
-  int64_t result = 777;
+static void should_reject_invalid_input(void) {
+  CheckedI64 invalid = eval_polynomial(NULL, 1, 2);
+  assert(!invalid.ok);
 
-  assert(!eval_polynomial(NULL, 1, 2, &result));
-  assert(result == 777);
+  CheckedI64 empty = eval_polynomial(NULL, 0, 2);
+  assert(empty.ok);
+  assert(empty.value == 0);
+}
 
-  assert(!eval_polynomial(coefficients, 3, 2, NULL));
+static void should_leave_coefficients_unchanged(void) {
+  int64_t coefficients[] = {2, 3, 4};
 
-  assert(eval_polynomial(NULL, 0, 2, &result));
-  assert(result == 0);
+  CheckedI64 actual = eval_polynomial(coefficients, 3, 2);
+
+  assert(actual.ok && actual.value == 24);
+  assert(coefficients[0] == 2);
+  assert(coefficients[1] == 3);
+  assert(coefficients[2] == 4);
 }
 
 int main(void) {
@@ -106,8 +103,11 @@ int main(void) {
   should_detect_overflow();
   puts("[PASS] Overflow detection");
 
-  should_reject_invalid_pointers();
-  puts("[PASS] Pointer validation");
+  should_reject_invalid_input();
+  puts("[PASS] Invalid input");
+
+  should_leave_coefficients_unchanged();
+  puts("[PASS] No coefficient mutation");
 
   return 0;
 }
