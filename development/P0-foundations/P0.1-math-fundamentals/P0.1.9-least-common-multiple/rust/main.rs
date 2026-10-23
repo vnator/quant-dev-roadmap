@@ -12,12 +12,16 @@ pub fn lcm(a: i64, b: i64) -> u64 {
     let a = a.unsigned_abs();
     let b = b.unsigned_abs();
 
+    if a == 0 || b == 0 {
+        return 0;
+    }
+
     if a == b {
         return a;
     }
 
-    let denominator: u64 = a * b;
-    let numerator: u64 = gcd(a, b);
+    let numerator = gcd(a, b);
+    let denominator = a.checked_mul(b).expect("LCM exceeds u64");
 
-    denominator / numerator
+    numerator / denominator
 }
