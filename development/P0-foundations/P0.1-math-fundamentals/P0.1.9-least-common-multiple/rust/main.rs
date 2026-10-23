@@ -20,8 +20,8 @@ pub fn lcm(a: i64, b: i64) -> u64 {
         return a;
     }
 
-    let numerator = gcd(a, b);
-    let denominator = a.checked_mul(b).expect("LCM exceeds u64");
+    let divisor = gcd(a, b);
+    let reduced_a = a / divisor;
 
-    numerator / denominator
+    reduced_a.checked_mul(b).expect("LCM exceeds u64")
 }
