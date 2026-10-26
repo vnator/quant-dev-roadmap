@@ -9,4 +9,4 @@ pub fn extended_gcd(a: i128, b: i128) -> (i128, i128, i128) {
     let y = x1 - (a / b) * y1;
 
     (g, x, y)
-
+}
