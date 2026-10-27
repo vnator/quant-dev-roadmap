@@ -1,4 +1,4 @@
-# P0.1.14-euler-totient
+# P0.1.15-miller-rabin
 
 ## Mathematical specification
 
