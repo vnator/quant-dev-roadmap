@@ -1,1 +1,16 @@
-// Implement the mathematical algorithm here.
+pub fn gcd(a: i32, b: i32) -> u32 {
+    let mut a = a.unsigned_abs();
+    let mut b = b.unsigned_abs();
+
+    if a == b {
+        return a;
+    }
+
+    while b != 0 {
+        let r = a % b;
+        a = b;
+        b = r;
+    }
+
+    a
+}
