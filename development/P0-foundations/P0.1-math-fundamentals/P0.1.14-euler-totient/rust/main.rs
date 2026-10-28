@@ -20,7 +20,7 @@ pub fn euler_phi(n: u128) -> u128 {
     }
 
     if rest > 1 {
-        result -= (result / rest);
+        result -= result / rest;
     }
 
     result
