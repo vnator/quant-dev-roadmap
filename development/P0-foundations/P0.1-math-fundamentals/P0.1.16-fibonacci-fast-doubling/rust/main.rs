@@ -1,5 +1,5 @@
 pub fn fibonacci_fast_doubling(n: u128) -> (u128, u128) {
-    assert!(n <= 185, "F(n+1) exceeds u128");
+    assert!(n <= 185, "F(n + 1) exceeds u128");
 
     if n == 0 {
         return (0, 1);
