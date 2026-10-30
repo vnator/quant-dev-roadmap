@@ -26,19 +26,19 @@ impl<const N: usize> Matrix<N> {
         Self::new(data)
     }
 
-    pub fn pow(&self, mut expo: u64) -> Self {
+    pub fn pow(&self, mut exp: u64) -> Self {
         let mut result = Self::identity();
         let mut base = self.clone();
 
         while exp > 0 {
             if !exp.is_multiple_of(2) {
-                result = result.multiply(&base);
+                result = &result * &base;
             }
 
             exp /= 2;
 
             if exp > 0 {
-                base = base.multiply(&base);
+                base = &base * &base;
             }
         }
 
