@@ -122,8 +122,8 @@ P1-numerical-statistical|P1.15-differential-equations|P1.15.3-adaptive-runge-kut
 P1-numerical-statistical|P1.15-differential-equations|P1.15.4-finite-difference-method
 P1-numerical-statistical|P1.15-differential-equations|P1.15.5-crank-nicolson
 P1-numerical-statistical|P1.15-differential-equations|P1.15.6-improved-euler-method
-P1-numerical-statistical|P1.15-differential-equations|P1.15.7-euler-third-order
-P1-numerical-statistical|P1.15-differential-equations|P1.15.8-euler-fourth-order
+P1-numerical-statistical|P1.15-differential-equations|P1.15.7-runge-kutta-third-order
+P1-numerical-statistical|P1.15-differential-equations|P1.15.8-runge-kutta-fourth-order-3-8-rule
 P2-quantitative-finance|P2.16-quantitative-algorithms|P2.16.1-simple-log-returns
 P2-quantitative-finance|P2.16-quantitative-algorithms|P2.16.2-historical-volatility
 P2-quantitative-finance|P2.16-quantitative-algorithms|P2.16.3-realized-volatility

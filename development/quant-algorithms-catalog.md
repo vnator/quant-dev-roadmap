@@ -873,7 +873,7 @@
 
 ### P1.15.1 — Euler Method
 
-- **Description:** Solves euler method with an explicit stopping criterion.
+- **Description:** Advances an ODE solution using one slope evaluation per step. Explicit Euler is a first-order, one-stage Runge–Kutta method.
 - **Mathematical definition:** `y_{n+1}=y_n+h f(t_n,y_n)`.
 - **ε / limits:** Step Δt>0, horizon T, discretization tolerance and stability constraints.
 - **Applications:** System simulation and pricing PDEs.
@@ -908,24 +908,24 @@
 
 ### P1.15.6 — Improved Euler Method (Heun)
 
-- **Description:** Advances an ODE solution with an explicit predictor and a correction that averages the slopes at the start and predicted end of the step.
+- **Description:** Advances an ODE solution with an explicit predictor and a correction that averages the slopes at the start and predicted end of the step. Heun's method is a second-order, two-stage Runge–Kutta method.
 - **Mathematical definition:** For `y' = f(t, y)`, set `k_1 = f(t_n, y_n)`, `k_2 = f(t_n + h, y_n + h k_1)`, and `y_{n+1} = y_n + (h/2)(k_1 + k_2)`.
 - **ε / limits:** Global error is `O(h^2)` on a fixed time interval as `h → 0` for a sufficiently smooth right-hand side that is Lipschitz in `y`. Choose a step size within the method's stability limits.
 - **Applications:** Fixed-step simulations of smooth, nonstiff systems and second-order reference calculations.
 
-### P1.15.7 — Third-Order Taylor Method
+### P1.15.7 — Third-Order Runge–Kutta Method (Kutta's RK3)
 
-- **Description:** Extends explicit Euler's first-order Taylor approximation by retaining terms through degree three.
-- **Mathematical definition:** `y_{n+1} = y_n + h y'_n + (h^2/2)y''_n + (h^3/6)y'''_n`. Evaluate the time derivatives along the local ODE solution through `(t_n, y_n)`.
-- **ε / limits:** Global error is `O(h^3)` on a fixed time interval as `h → 0` when the local solution has a uniformly bounded fourth derivative and the step map is Lipschitz in the state with factor at most `1 + Lh` for some fixed `L`. Choose a step size within the method's stability limits.
-- **Applications:** Smooth ODE simulations and convergence comparisons when time derivatives are available.
+- **Description:** Advances an ODE solution with three explicit slope evaluations per step.
+- **Mathematical definition:** For `y' = f(t, y)`, compute `k_1 = f(t_n, y_n)`, `k_2 = f(t_n + h/2, y_n + h k_1/2)`, and `k_3 = f(t_n + h, y_n + h(-k_1 + 2 k_2))`. Set `y_{n+1} = y_n + (h/6)(k_1 + 4 k_2 + k_3)`.
+- **ε / limits:** Global error is `O(h^3)` on a fixed interval for a sufficiently smooth right-hand side that is Lipschitz in `y`. Choose a step size within the method's stability limits.
+- **Applications:** Fixed-step integration of nonstiff ODEs and convergence comparisons with Euler and Heun.
 
-### P1.15.8 — Fourth-Order Taylor Method
+### P1.15.8 — Fourth-Order Runge–Kutta Method (3/8 Rule)
 
-- **Description:** Extends explicit Euler's first-order Taylor approximation by retaining terms through degree four.
-- **Mathematical definition:** `y_{n+1} = y_n + h y'_n + (h^2/2)y''_n + (h^3/6)y'''_n + (h^4/24)y''''_n`. Evaluate the time derivatives along the local ODE solution through `(t_n, y_n)`.
-- **ε / limits:** Global error is `O(h^4)` on a fixed time interval as `h → 0` when the local solution has a uniformly bounded fifth derivative and the step map is Lipschitz in the state with factor at most `1 + Lh` for some fixed `L`. Choose a step size within the method's stability limits.
-- **Applications:** High-order integration of smooth ODEs with available derivatives and numerical benchmarks.
+- **Description:** Advances an ODE solution with four explicit slope evaluations using the 3/8-rule coefficients. P1.15.2 covers the classical RK4 formula.
+- **Mathematical definition:** For `y' = f(t, y)`, compute `k_1 = f(t_n, y_n)`, `k_2 = f(t_n + h/3, y_n + h k_1/3)`, `k_3 = f(t_n + 2h/3, y_n + h(-k_1/3 + k_2))`, and `k_4 = f(t_n + h, y_n + h(k_1 - k_2 + k_3))`. Set `y_{n+1} = y_n + (h/8)(k_1 + 3 k_2 + 3 k_3 + k_4)`.
+- **ε / limits:** Global error is `O(h^4)` on a fixed interval for a sufficiently smooth right-hand side that is Lipschitz in `y`. Choose a step size within the method's stability limits.
+- **Applications:** Fixed-step integration of nonstiff ODEs and comparisons between fourth-order Runge–Kutta formulas.
 
 ## P2.16 — Quantitative Algorithms
 
