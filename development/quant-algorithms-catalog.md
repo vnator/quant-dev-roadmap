@@ -1,7 +1,7 @@
 # Quantitative Development — Algorithm Specifications
 
 > **Status:** initial specifications, not implemented code.
-> **Source:** 237 entries from `setup-quant-development.sh` (P0–P3). Check actual directory IDs against `development/algorithms.tsv` if they have been renumbered.
+> **Source:** 241 entries (P0–P3) in `development/algorithms.tsv`.
 
 ## Conventions
 
@@ -561,6 +561,13 @@
 - **ε / limits:** Absolute/relative tolerance; iteration cap; check convergence and conditioning.
 - **Applications:** Equation solving and integration for pricing.
 
+### P1.7.7 — Inverse Linear Interpolation
+
+- **Description:** Estimates the independent variable corresponding to a target dependent value by inverting the line through two samples.
+- **Mathematical definition:** `x* = x_0 + (x_1 - x_0)(y* - y_0)/(y_1 - y_0)`.
+- **ε / limits:** Use distinct sample locations and require `y_1 ≠ y_0`. Small differences in the dependent values can make the estimate sensitive to sample errors. To locate an event, use consecutive samples that bracket the target. If an endpoint equals the target, return its location.
+- **Applications:** Root approximation, threshold crossings, and event localization in ODE solutions.
+
 ## P1.8 — Numerical Linear Algebra
 
 ### P1.8.1 — Conjugate Gradient Solver
@@ -898,6 +905,27 @@
 - **Mathematical definition:** `Crank-Nicolson: (I-dt L/2)u^{n+1}=(I+dt L/2)u^n`.
 - **ε / limits:** Step Δt>0, horizon T, discretization tolerance and stability constraints.
 - **Applications:** System simulation and pricing PDEs.
+
+### P1.15.6 — Improved Euler Method (Heun)
+
+- **Description:** Advances an ODE solution with an explicit predictor and a correction that averages the slopes at the start and predicted end of the step.
+- **Mathematical definition:** For `y' = f(t, y)`, set `k_1 = f(t_n, y_n)`, `k_2 = f(t_n + h, y_n + h k_1)`, and `y_{n+1} = y_n + (h/2)(k_1 + k_2)`.
+- **ε / limits:** Global error is `O(h^2)` on a fixed time interval as `h → 0` for a sufficiently smooth right-hand side that is Lipschitz in `y`. Choose a step size within the method's stability limits.
+- **Applications:** Fixed-step simulations of smooth, nonstiff systems and second-order reference calculations.
+
+### P1.15.7 — Third-Order Taylor Method
+
+- **Description:** Extends explicit Euler's first-order Taylor approximation by retaining terms through degree three.
+- **Mathematical definition:** `y_{n+1} = y_n + h y'_n + (h^2/2)y''_n + (h^3/6)y'''_n`. Evaluate the time derivatives along the local ODE solution through `(t_n, y_n)`.
+- **ε / limits:** Global error is `O(h^3)` on a fixed time interval as `h → 0` when the local solution has a uniformly bounded fourth derivative and the step map is Lipschitz in the state with factor at most `1 + Lh` for some fixed `L`. Choose a step size within the method's stability limits.
+- **Applications:** Smooth ODE simulations and convergence comparisons when time derivatives are available.
+
+### P1.15.8 — Fourth-Order Taylor Method
+
+- **Description:** Extends explicit Euler's first-order Taylor approximation by retaining terms through degree four.
+- **Mathematical definition:** `y_{n+1} = y_n + h y'_n + (h^2/2)y''_n + (h^3/6)y'''_n + (h^4/24)y''''_n`. Evaluate the time derivatives along the local ODE solution through `(t_n, y_n)`.
+- **ε / limits:** Global error is `O(h^4)` on a fixed time interval as `h → 0` when the local solution has a uniformly bounded fifth derivative and the step map is Lipschitz in the state with factor at most `1 + Lh` for some fixed `L`. Choose a step size within the method's stability limits.
+- **Applications:** High-order integration of smooth ODEs with available derivatives and numerical benchmarks.
 
 ## P2.16 — Quantitative Algorithms
 

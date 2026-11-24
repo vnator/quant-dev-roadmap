@@ -74,6 +74,7 @@ P1-numerical-statistical|P1.7-numerical-methods|P1.7.3-brents-method
 P1-numerical-statistical|P1.7-numerical-methods|P1.7.4-cubic-spline-interpolation
 P1-numerical-statistical|P1.7-numerical-methods|P1.7.5-gaussian-quadrature
 P1-numerical-statistical|P1.7-numerical-methods|P1.7.6-adaptive-simpson-integration
+P1-numerical-statistical|P1.7-numerical-methods|P1.7.7-inverse-linear-interpolation
 P1-numerical-statistical|P1.8-numerical-linear-algebra|P1.8.1-conjugate-gradient-solver
 P1-numerical-statistical|P1.8-numerical-linear-algebra|P1.8.2-gmres
 P1-numerical-statistical|P1.8-numerical-linear-algebra|P1.8.3-qr-eigenvalue-algorithm
@@ -120,6 +121,9 @@ P1-numerical-statistical|P1.15-differential-equations|P1.15.2-runge-kutta-fourth
 P1-numerical-statistical|P1.15-differential-equations|P1.15.3-adaptive-runge-kutta
 P1-numerical-statistical|P1.15-differential-equations|P1.15.4-finite-difference-method
 P1-numerical-statistical|P1.15-differential-equations|P1.15.5-crank-nicolson
+P1-numerical-statistical|P1.15-differential-equations|P1.15.6-improved-euler-method
+P1-numerical-statistical|P1.15-differential-equations|P1.15.7-euler-third-order
+P1-numerical-statistical|P1.15-differential-equations|P1.15.8-euler-fourth-order
 P2-quantitative-finance|P2.16-quantitative-algorithms|P2.16.1-simple-log-returns
 P2-quantitative-finance|P2.16-quantitative-algorithms|P2.16.2-historical-volatility
 P2-quantitative-finance|P2.16-quantitative-algorithms|P2.16.3-realized-volatility
